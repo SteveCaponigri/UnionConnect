@@ -3,9 +3,23 @@ import 'constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'login.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'dart:io';
 
-Widget myDrawer (String company, BuildContext context, String user, String logoURL) {
+
+Widget myDrawer (String company, BuildContext context, String user, String logoURL, VoidCallback onSignedOut) {
+
+void _signOut() async {
+  try {
+          print("User Signing out is $user");
+          signOut();
+          onSignedOut;
+          print("User Signed out is $user");
+          // exit(0);
+          runApp(MaterialApp(home: RootPage(),));
+  } catch(e) {
+    print(e);
+  }
+}
+
   return Drawer(
     child: Container(
       color: accent,
@@ -21,13 +35,7 @@ Widget myDrawer (String company, BuildContext context, String user, String logoU
       ),
       ListTile(title: Text("Log Out"),
         trailing: Icon(Icons.exit_to_app, color: mainColor,),
-        onTap: () async {
-          print("User Signing out is $user");
-          signOut();
-          print("User Signed out is $user");
-          // exit(0);
-          runApp(MaterialApp(home: RootPage(),));
-        },
+        onTap: _signOut
       ),
     ],),)
     
