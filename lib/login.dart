@@ -52,6 +52,12 @@ void companyText() async {
     });
   }
 
+  void _signedOut() {
+    setState(() {
+     authStatus = AuthStatus.notSignedIn; 
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
 
@@ -59,7 +65,7 @@ void companyText() async {
       case AuthStatus.notSignedIn:
         return LoginPage(onSignedIn: _signedIn);
         case AuthStatus.signedIn:
-        return MyHomePage(company: company, user: user);
+        return MyHomePage(company: company, user: user, onSignedOut: _signedOut,);
     }
 
     // return user == null ? LoginPage(onSignedIn: _signedIn,) : 
