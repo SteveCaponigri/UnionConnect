@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "329093021915",
+    "firebase_url": "https://union-connect.firebaseio.com",
+    "project_id": "union-connect",
+    "storage_bucket": "union-connect.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:329093021915:android:63bbbab8a4b02bde",
+        "android_client_info": {
+          "package_name": "app.web.innov8learningsolutions.unionconnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "329093021915-5t21fcvg62dr2ad4uibput13mtallkab.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDF4EuwEbnY_fP5XwGjvXvk9pyJ9HVebBs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "329093021915-5t21fcvg62dr2ad4uibput13mtallkab.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "329093021915-00itto8n5dspl2dsvblbn0voeakras35.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "app.web.innov8learningsolutions.unionconnect"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
