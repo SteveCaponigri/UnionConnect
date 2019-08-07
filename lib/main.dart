@@ -27,10 +27,10 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.company, this.user}) : super(key: key);
+  MyHomePage({Key key, this.company, this.user, this.onSignedOut}) : super(key: key);
   final String company;
   final String user;
-
+  final VoidCallback onSignedOut;
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -177,7 +177,7 @@ update(String token) {
               child: Image.network(logoURL),),          
         ],
       ),
-      drawer: myDrawer(widget.company, context, widget.user, logoURL),
+      drawer: myDrawer(widget.company, context, widget.user, logoURL, widget.onSignedOut),
       body: HomeScreen(
         company: widget.company,
         ),
